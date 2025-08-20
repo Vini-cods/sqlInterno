@@ -1,4 +1,5 @@
 import { View, Button, StyleSheet, TextInput } from 'react-native';
+import { useState } from 'react';
 
 export function Index() {
 
@@ -10,8 +11,8 @@ export function Index() {
 
     return (
         <View style={styles.container}>
-            <TextInput style={styles.texto} placeholder="Nome" />
-            <TextInput style={styles.texto} placeholder="Quantidade" />
+            <TextInput style={styles.texto} placeholder="Nome" onChangeText={setNome} value={nome} />
+            <TextInput style={styles.texto} placeholder="Quantidade" onChangeText={setQuantidade} value={quantidade} />
             <Button title="Salvar" />
             <TextInput style={styles.texto} placeholder="Pesquisar" />
         </View>
