@@ -1,5 +1,6 @@
-import { View, Button, StyleSheet, TextInput } from 'react-native';
+import { View, Button, StyleSheet, TextInput, Alert } from 'react-native';
 import { useState } from 'react';
+import { usarBD } from './hooks/usarBD';
 
 export function Index() {
 
@@ -8,6 +9,7 @@ export function Index() {
     const [quantidade, setQuantidade] = useState('');
     const [pesquisa, setPesquisa] = useState('');
     const [produtos, setProdutos] = useState([]);
+    const produtosBD=usarBD();
 
     return (
         <View style={styles.container}>
