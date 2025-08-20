@@ -3,8 +3,8 @@ import { MaterialIcons } from '@expo/vector-icons';
 
 export function Produto({ data, onDelete, onSelect, isSelected }) {
     return (
-        <Pressable 
-            style={[styles.container, isSelected && styles.containerSelecionado]} 
+        <Pressable
+            style={[styles.container, isSelected && styles.containerSelecionado]}
             onPress={onSelect}
         >
             <Text style={styles.text}>
