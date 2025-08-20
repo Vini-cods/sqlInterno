@@ -23,5 +23,17 @@ export function usarBD() {
             await regras.finalizeAsync();
         }
     }
-    return { create }
+    async function read(id) {
+        try {
+            const consulta = "SELECT * FROM produtos WHERE id ";
+
+            const resposta = await bd.getAllAsync(consulta, [id])
+
+            return resposta;
+        } catch (error) {
+            throw error;
+        }
+    }
+
+    return { create, read  }
 }
